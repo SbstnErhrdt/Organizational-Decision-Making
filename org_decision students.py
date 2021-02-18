@@ -19,7 +19,7 @@ q_low = -5
 e_low = 0
 e_mid = 5
 e_high = 10
-E = 100
+E = 1000000
 K = np.linspace(0, 5, num=11)
 number_Ks = len(K)
 
