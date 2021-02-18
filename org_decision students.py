@@ -75,8 +75,11 @@ def choose_voting(value_p, per_e_low, per_e_mid, per_e_high):
         return 0
 
 def choose_average(value_p, per_e_low, per_e_mid, per_e_high):
-    performance = 0
-    return performance
+    res = (float(per_e_low) + float(per_e_mid)+ float(per_e_high)) / 3
+    if res > 0:
+        return value_p
+    else:
+        return 0
 
 
 performance_matrix = np.zeros((number_Ks, 4))
