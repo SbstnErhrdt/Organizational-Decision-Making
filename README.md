@@ -6,3 +6,4 @@
 ## Team
 
 * Sebastian Erhardt
+* Stephan Traut
