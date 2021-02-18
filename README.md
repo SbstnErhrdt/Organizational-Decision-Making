@@ -7,5 +7,4 @@
 
 * Sebastian Erhardt
 * Stephan Traut
-* Mena Teebken
-* 
+*Louisa
