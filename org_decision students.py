@@ -45,10 +45,10 @@ def perceive_quality(value_p, type_p, type_ind):
 
 def choose_individual(value_p, per_e_mid):
     if per_e_mid > 0:
-        return  value_p
+        return value_p
     else:
-        return  0
-    return performance
+        return 0
+
 
 ##########################
 # Please change the following functions!
@@ -60,7 +60,7 @@ def choose_delegate(value_p, per_e_low, per_e_mid, per_e_high, type_p,
     return performance
 
 
-#we count each positive vote and if the number of total positive votes is bigger or equal 2, we accept
+# we count each positive vote and if the number of total positive votes is bigger or equal 2, we accept
 def choose_voting(value_p, per_e_low, per_e_mid, per_e_high):
     voting = 0
     if per_e_low > 0:
@@ -73,6 +73,7 @@ def choose_voting(value_p, per_e_low, per_e_mid, per_e_high):
         return value_p
     else:
         return 0
+
 
 def choose_average(value_p, per_e_low, per_e_mid, per_e_high):
     performance = 0
