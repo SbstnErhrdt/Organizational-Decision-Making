@@ -60,9 +60,19 @@ def choose_delegate(value_p, per_e_low, per_e_mid, per_e_high, type_p,
     performance = 0
     return performance
 
+#we count each positive vote and if the number of total positive votes is bigger or equal 2, we accept
 def choose_voting(value_p, per_e_low, per_e_mid, per_e_high):
-    performance = 0
-    return performance
+    voting = 0
+    if per_e_low > 0:
+        voting += 1
+    if per_e_mid > 0:
+        voting += 1
+    if per_e_high > 0:
+        voting += 1
+    if voting >= 2:
+        return value_p
+    else:
+        return 0
 
 def choose_average(value_p, per_e_low, per_e_mid, per_e_high):
     performance = 0
