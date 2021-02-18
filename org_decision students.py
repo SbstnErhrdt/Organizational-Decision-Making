@@ -56,8 +56,21 @@ def choose_individual(value_p, per_e_mid):
 
 def choose_delegate(value_p, per_e_low, per_e_mid, per_e_high, type_p,
                     e_low, e_mid, e_high):
-    performance = 0
-    return performance
+    if type_p > ((float(e_high) + float(e_mid)) / 2) :
+        if per_e_high > 0:
+            return value_p
+        else:
+            return 0
+    elif type_p < ((float(e_mid) + float(e_low)) / 2) :
+        if per_e_low > 0:
+            return value_p
+        else:
+            return 0
+    else:
+        if per_e_mid > 0:
+            return value_p
+        else:
+            return 0
 
 
 # we count each positive vote and if the number of total positive votes is bigger or equal 2, we accept
