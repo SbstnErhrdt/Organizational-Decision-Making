@@ -3,7 +3,6 @@
 Created on Sat Jan 19 20:38:07 2019
 
 @author: Helge
-Seb
 """
 
 import numpy as np
@@ -46,10 +45,10 @@ def perceive_quality(value_p, type_p, type_ind):
 
 def choose_individual(value_p, per_e_mid):
     if per_e_mid > 0:
-        return value_p
+        return = value_p
     else:
-        return 0
-
+        return = 0
+    return performance
 
 ##########################
 # Please change the following functions!
@@ -61,6 +60,7 @@ def choose_delegate(value_p, per_e_low, per_e_mid, per_e_high, type_p,
     return performance
 
 
+#we count each positive vote and if the number of total positive votes is bigger or equal 2, we accept
 def choose_voting(value_p, per_e_low, per_e_mid, per_e_high):
     voting = 0
     if per_e_low > 0:
@@ -69,19 +69,14 @@ def choose_voting(value_p, per_e_low, per_e_mid, per_e_high):
         voting += 1
     if per_e_high > 0:
         voting += 1
-
     if voting >= 2:
         return value_p
     else:
         return 0
 
-
 def choose_average(value_p, per_e_low, per_e_mid, per_e_high):
-    res = (float(per_e_low) + float(per_e_mid)+ float(per_e_high)) / 3
-    if res > 0:
-        return value_p
-    else:
-        return 0
+    performance = 0
+    return performance
 
 
 performance_matrix = np.zeros((number_Ks, 4))
