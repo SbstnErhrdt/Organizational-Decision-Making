@@ -7,4 +7,4 @@
 
 * Sebastian Erhardt
 * Stephan Traut
-*Louisa
+* Louisa
