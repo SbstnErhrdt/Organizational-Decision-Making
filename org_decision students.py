@@ -45,9 +45,9 @@ def perceive_quality(value_p, type_p, type_ind):
 
 def choose_individual(value_p, per_e_mid):
     if per_e_mid > 0:
-        return = value_p
+        return  value_p
     else:
-        return = 0
+        return  0
     return performance
 
 ##########################
