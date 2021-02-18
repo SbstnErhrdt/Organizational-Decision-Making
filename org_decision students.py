@@ -56,12 +56,12 @@ def choose_individual(value_p, per_e_mid):
 
 def choose_delegate(value_p, per_e_low, per_e_mid, per_e_high, type_p,
                     e_low, e_mid, e_high):
-    if type_p > ((float(e_high) + float(e_mid)) / 2) :
+    if type_p > ((float(e_high) + float(e_mid)) / 2):
         if per_e_high > 0:
             return value_p
         else:
             return 0
-    elif type_p < ((float(e_mid) + float(e_low)) / 2) :
+    elif type_p < ((float(e_mid) + float(e_low)) / 2):
         if per_e_low > 0:
             return value_p
         else:
@@ -89,7 +89,7 @@ def choose_voting(value_p, per_e_low, per_e_mid, per_e_high):
 
 
 def choose_average(value_p, per_e_low, per_e_mid, per_e_high):
-    res = (float(per_e_low) + float(per_e_mid)+ float(per_e_high)) / 3
+    res = (float(per_e_low) + float(per_e_mid) + float(per_e_high)) / 3
     if res > 0:
         return value_p
     else:
@@ -102,7 +102,7 @@ value_type_matrix = np.zeros((E, 2))
 # Save each result in matrix
 # 0  for individual, 1, for delegating, 2 for voting, 3 for averageing
 
-##########################    
+##########################
 # Simulation
 ##########################
 
@@ -121,6 +121,9 @@ for k in K:
         per_e_mid = perceive_quality(value_p, type_p, e_mid)
         # print('Individual perception: ', per_e_mid)
         per_e_high = perceive_quality(value_p, type_p, e_high)
+
+        ####################################
+        # Functions
         # Individual
         temp_matrix[e, 0] = choose_individual(value_p, per_e_mid)
         # print('Ind. performance: ', temp_matrix[e,0])
@@ -131,6 +134,7 @@ for k in K:
                                           per_e_high)
         temp_matrix[e, 3] = choose_average(value_p, per_e_low, per_e_mid,
                                            per_e_high)
+
         # print(temp_matrix[:,0])
     performance_matrix[k_counter, 0] = np.average(temp_matrix[:, 0])
     performance_matrix[k_counter, 1] = np.average(temp_matrix[:, 1])
